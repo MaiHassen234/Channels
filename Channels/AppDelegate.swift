@@ -10,15 +10,19 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    
+        
+    var window: UIWindow?
+    var applicationCoordinator: ApplicationCoordinator?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow()
+        let applicationCoordinator = ApplicationCoordinator()
+        self.applicationCoordinator = applicationCoordinator
         if #available(iOS 13.0, *) {
-          //scene delegate
+            //scene delegate
         } else {
-          
+            applicationCoordinator.start()
         }
         return true
     }
