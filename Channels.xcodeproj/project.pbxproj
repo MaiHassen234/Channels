@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6297DE92242A32360088C20C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE8C242A32360088C20C /* BaseModel.swift */; };
+		6297DE93242A32360088C20C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE8D242A32360088C20C /* BaseViewController.swift */; };
+		6297DE94242A32360088C20C /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE8E242A32360088C20C /* BaseModelProtocol.swift */; };
+		6297DE95242A32360088C20C /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE8F242A32360088C20C /* BasePresenter.swift */; };
+		6297DE96242A32360088C20C /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE90242A32360088C20C /* BaseViewProtocol.swift */; };
+		6297DE97242A32360088C20C /* BasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE91242A32360088C20C /* BasePresenterProtocol.swift */; };
+		6297DE99242A328C0088C20C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE98242A328C0088C20C /* HomeModel.swift */; };
+		6297DE9B242A329E0088C20C /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE9A242A329E0088C20C /* HomePresenter.swift */; };
+		6297DE9D242A32B70088C20C /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE9C242A32B70088C20C /* HomeProtocols.swift */; };
 		62BDF089242944EF00AF383A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDF087242944EF00AF383A /* Coordinator.swift */; };
 		62BDF08A242944EF00AF383A /* AppCoordinatoor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDF088242944EF00AF383A /* AppCoordinatoor.swift */; };
 		62BDF08D242944FD00AF383A /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDF08B242944FD00AF383A /* AppRouter.swift */; };
@@ -42,6 +51,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6297DE8C242A32360088C20C /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		6297DE8D242A32360088C20C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6297DE8E242A32360088C20C /* BaseModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
+		6297DE8F242A32360088C20C /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		6297DE90242A32360088C20C /* BaseViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		6297DE91242A32360088C20C /* BasePresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocol.swift; sourceTree = "<group>"; };
+		6297DE98242A328C0088C20C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		6297DE9A242A329E0088C20C /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		6297DE9C242A32B70088C20C /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		62BDF087242944EF00AF383A /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		62BDF088242944EF00AF383A /* AppCoordinatoor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinatoor.swift; sourceTree = "<group>"; };
 		62BDF08B242944FD00AF383A /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
@@ -90,6 +108,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6297DE8B242A31F20088C20C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6297DE8C242A32360088C20C /* BaseModel.swift */,
+				6297DE8E242A32360088C20C /* BaseModelProtocol.swift */,
+				6297DE8F242A32360088C20C /* BasePresenter.swift */,
+				6297DE91242A32360088C20C /* BasePresenterProtocol.swift */,
+				6297DE8D242A32360088C20C /* BaseViewController.swift */,
+				6297DE90242A32360088C20C /* BaseViewProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		62BDF081242944AA00AF383A /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +161,9 @@
 				62BDF0932429453100AF383A /* HomeCoordinator.swift */,
 				62BDF0982429455E00AF383A /* HomeViewController.swift */,
 				62BDF0992429455E00AF383A /* HomeViewController.xib */,
+				6297DE98242A328C0088C20C /* HomeModel.swift */,
+				6297DE9A242A329E0088C20C /* HomePresenter.swift */,
+				6297DE9C242A32B70088C20C /* HomeProtocols.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -157,6 +191,7 @@
 		62C199972428F087003CFF03 /* Channels */ = {
 			isa = PBXGroup;
 			children = (
+				6297DE8B242A31F20088C20C /* Base */,
 				62BDF084242944CC00AF383A /* Scenes */,
 				62BDF083242944C300AF383A /* Extentions */,
 				62BDF082242944BC00AF383A /* Router */,
@@ -321,13 +356,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				62BDF08E242944FD00AF383A /* Router.swift in Sources */,
+				6297DE95242A32360088C20C /* BasePresenter.swift in Sources */,
+				6297DE9D242A32B70088C20C /* HomeProtocols.swift in Sources */,
+				6297DE94242A32360088C20C /* BaseModelProtocol.swift in Sources */,
 				62C1999D2428F087003CFF03 /* ViewController.swift in Sources */,
+				6297DE92242A32360088C20C /* BaseModel.swift in Sources */,
 				62C199992428F087003CFF03 /* AppDelegate.swift in Sources */,
 				62BDF08A242944EF00AF383A /* AppCoordinatoor.swift in Sources */,
+				6297DE93242A32360088C20C /* BaseViewController.swift in Sources */,
+				6297DE96242A32360088C20C /* BaseViewProtocol.swift in Sources */,
+				6297DE99242A328C0088C20C /* HomeModel.swift in Sources */,
 				62BDF089242944EF00AF383A /* Coordinator.swift in Sources */,
 				62BDF09A2429455E00AF383A /* HomeViewController.swift in Sources */,
+				6297DE97242A32360088C20C /* BasePresenterProtocol.swift in Sources */,
 				62BDF0902429451000AF383A /* UIViewController+Showable.swift in Sources */,
 				62BDF0962429453100AF383A /* HomeCoordinator.swift in Sources */,
+				6297DE9B242A329E0088C20C /* HomePresenter.swift in Sources */,
 				62BDF08D242944FD00AF383A /* AppRouter.swift in Sources */,
 				62C1999B2428F087003CFF03 /* SceneDelegate.swift in Sources */,
 			);
@@ -497,6 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = Channels/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,6 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2C86JD592M;
 				INFOPLIST_FILE = Channels/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

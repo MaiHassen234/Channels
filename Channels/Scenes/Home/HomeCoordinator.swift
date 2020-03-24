@@ -31,7 +31,10 @@ class HomeCoordinator: Coordinator {
     override func createModuleOfCoordinator() -> UIViewController? {
 
         let view = HomeViewController()
-        return view
+         let model = HomeModel()
+         let presenter = HomePresenter(view: view, model: model)
+         view.setPresenter(presenter: presenter)
+         return view
         
     }
     

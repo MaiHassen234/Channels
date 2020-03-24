@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController<HomePresenter> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,4 +27,7 @@ class HomeViewController: UIViewController {
     }
     */
 
+}
+extension HomeViewController: HomeViewProtocol {
+    
 }
