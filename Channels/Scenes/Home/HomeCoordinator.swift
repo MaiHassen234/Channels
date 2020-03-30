@@ -11,9 +11,7 @@ import UIKit
 class HomeCoordinator: Coordinator {
     
     var appRouter: AppRouter
-    
- 
-    
+
     init(appRouter: AppRouter) {
         
         self.appRouter = appRouter
@@ -30,7 +28,7 @@ class HomeCoordinator: Coordinator {
     
     override func createModuleOfCoordinator() -> UIViewController? {
 
-        let view = HomeViewController()
+         let view = HomeViewController()
          let model = HomeModel()
          let presenter = HomePresenter(view: view, model: model)
          view.setPresenter(presenter: presenter)
@@ -39,5 +37,3 @@ class HomeCoordinator: Coordinator {
     }
     
 }
-
-

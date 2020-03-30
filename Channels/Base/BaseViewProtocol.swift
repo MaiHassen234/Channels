@@ -15,11 +15,8 @@ protocol BaseViewProtocol: ViewLoadable, ViewMessageable {
 
 protocol ViewLoadable {
 
-
 }
 
 protocol ViewMessageable {
-
-
 
 }

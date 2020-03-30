@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 class AppRouter: NSObject, Router {
 
     private var completions: [UIViewController : () -> Void]
@@ -107,4 +106,3 @@ extension AppRouter: UINavigationControllerDelegate {
         runCompletion(for: poppedViewController)
     }
 }
-

@@ -16,7 +16,6 @@ class HomeViewController: BaseViewController<HomePresenter> {
         // Do any additional setup after loading the view.
     }
 
-
     /*
     // MARK: - Navigation
 
