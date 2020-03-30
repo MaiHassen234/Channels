@@ -14,7 +14,6 @@ protocol CoordinatorDelegate: class {
     
 }
 
-
 class Coordinator: NSObject {
     
     private(set) var childCoordinators = [Coordinator]()
@@ -24,8 +23,11 @@ class Coordinator: NSObject {
     func createModuleOfCoordinator() -> UIViewController? {
           return nil
       }
-      
-    
+    func getRootViewController() -> UIViewController? {
+         return nil
+     }
+     
+  
     func start() {}
     
     func finish() {
@@ -35,8 +37,6 @@ class Coordinator: NSObject {
     }
  
 }
-
-
 
 extension Coordinator {
     
@@ -62,7 +62,6 @@ extension Coordinator {
         
     }
     
-
     func removeAllChildCoordinators() {
         
         self.childCoordinators.removeAll()

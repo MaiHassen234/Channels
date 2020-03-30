@@ -1,0 +1,22 @@
+input_dir: Channels
+output_dir: Channels
+strings:
+ inputs: Resources/Localizable.strings
+ outputs:
+   templateName: structured-swift4
+   output: Resources/Localized.swift
+ fallback: Base
+xcassets:
+- inputs:
+    - Resources/Colors.xcassets
+    - Resources/Images.xcassets
+  outputs:
+    - templateName: swift4
+      output: Resources/Assets-Constants.swift
+
+fonts:
+ inputs: Resources/fonts/
+ filter: .+\.otf$
+ outputs:
+   templateName: swift4
+   output:  Resources/fonts/Fonts-Constants.swift

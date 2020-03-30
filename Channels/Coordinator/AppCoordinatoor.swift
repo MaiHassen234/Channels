@@ -34,14 +34,15 @@ class ApplicationCoordinator: Coordinator {
             guard let appwindow = (UIApplication.shared.delegate?.window as? UIWindow) else { return }
             window = appwindow
         }
-        self.startHome()
+        self.startSplash()
         window?.rootViewController = appRouter.toPresentable()
         window?.makeKeyAndVisible()
         
     }
-    func startHome() {
-        let homeCoordinator = HomeCoordinator(appRouter: appRouter)
-        self.rootCoordinator = homeCoordinator
+
+    func startSplash() {
+        let splashCoordinator = SplashCoordinator(appRouter: appRouter)
+        self.rootCoordinator = splashCoordinator
         self.rootCoordinator?.start()
         
     }
