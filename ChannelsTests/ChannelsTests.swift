@@ -5,7 +5,7 @@
 //  Created by Mai hassen on 3/23/20.
 //  Copyright © 2020 Mai hassen. All rights reserved.
 //
-
+//swiftlint:disable all
 import XCTest
 @testable import Channels
 
