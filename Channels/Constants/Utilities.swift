@@ -13,4 +13,3 @@ class Utilities {
    static var screenWidth = UIScreen.main.bounds.width
    static var screenHeight = UIScreen.main.bounds.height
 }
-

@@ -14,5 +14,7 @@ class ChannelsSeriesCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+       func configureSeriesCell(with item: LatestMedia?) {
+            
+        }
 }

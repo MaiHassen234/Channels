@@ -15,4 +15,8 @@ class HeaderTitleCollectionReusableView: UICollectionReusableView {
         // Initialization code
     }
     
+    func setupView() {
+        
+    }
+    
 }
