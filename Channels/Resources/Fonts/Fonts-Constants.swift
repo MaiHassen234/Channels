@@ -20,7 +20,12 @@ internal enum FontFamily {
     internal static let bold = FontConvertible(name: "BBCNassim-EX-Bold", family: "BBCNassim-EX", path: "BBCNassim-EX-Bold.otf")
     internal static let all: [FontConvertible] = [bold]
   }
-  internal static let allCustomFonts: [FontConvertible] = [BBCNassimEX.all].flatMap { $0 }
+  internal enum Gilroy {
+    internal static let extraBold = FontConvertible(name: "Gilroy-ExtraBold", family: "Gilroy", path: "Gilroy-ExtraBold.otf")
+    internal static let light = FontConvertible(name: "Gilroy-Light", family: "Gilroy", path: "Gilroy-Light.otf")
+    internal static let all: [FontConvertible] = [extraBold, light]
+  }
+  internal static let allCustomFonts: [FontConvertible] = [BBCNassimEX.all, Gilroy.all].flatMap { $0 }
   internal static func registerAllCustomFonts() {
     allCustomFonts.forEach { $0.register() }
   }
