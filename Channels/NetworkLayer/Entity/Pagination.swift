@@ -23,7 +23,7 @@ struct Pagination: Codable {
         case perPage
         case currentPage
         case totalPages
-        //    case links
+        //  case links
     }
 
     init(from decoder: Decoder) throws {

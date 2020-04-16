@@ -9,13 +9,4 @@
 import Foundation
 struct NetworkDefaults {
 
-    var baseUrl: String = Environment.rootURL
-    var apiKey: String = ""
-    var language: String = ""
-
-    static var `defaults` : NetworkDefaults {
-        let instance = NetworkDefaults()
-        return instance
-    }
-
 }
