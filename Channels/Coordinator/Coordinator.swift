@@ -26,8 +26,7 @@ class Coordinator: NSObject {
     func getRootViewController() -> UIViewController? {
          return nil
      }
-     
-  
+       
     func start() {}
     
     func finish() {

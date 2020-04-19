@@ -30,9 +30,7 @@
 		6279707B244386EC00B62963 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6279707A244386EC00B62963 /* Home.swift */; };
 		627970A22443981600B62963 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627970A12443981600B62963 /* Bundle+Extension.swift */; };
 		6293F20C2447EB2700525F32 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6293F20A2447EB2700525F32 /* SDWebImage.framework */; };
-		6293F20D2447EB2700525F32 /* SDWebImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6293F20A2447EB2700525F32 /* SDWebImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6293F20E2447EB2700525F32 /* SDWebImageMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6293F20B2447EB2700525F32 /* SDWebImageMapKit.framework */; };
-		6293F20F2447EB2700525F32 /* SDWebImageMapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6293F20B2447EB2700525F32 /* SDWebImageMapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6297DE92242A32360088C20C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE8C242A32360088C20C /* BaseModel.swift */; };
 		6297DE93242A32360088C20C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE8D242A32360088C20C /* BaseViewController.swift */; };
 		6297DE94242A32360088C20C /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6297DE8E242A32360088C20C /* BaseModelProtocol.swift */; };
@@ -57,6 +55,8 @@
 		62C199A52428F088003CFF03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62C199A32428F088003CFF03 /* LaunchScreen.storyboard */; };
 		62C199B02428F089003CFF03 /* ChannelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C199AF2428F089003CFF03 /* ChannelsTests.swift */; };
 		62C199BB2428F089003CFF03 /* ChannelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62C199BA2428F089003CFF03 /* ChannelsUITests.swift */; };
+		62CF0AC1244B9C9F005C3919 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6293F20A2447EB2700525F32 /* SDWebImage.framework */; };
+		62CF0AC2244B9C9F005C3919 /* SDWebImageMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6293F20B2447EB2700525F32 /* SDWebImageMapKit.framework */; };
 		62E6D3BA24325C37000A0817 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E6D3B924325C37000A0817 /* Colors.xcassets */; };
 		62E6D3BD24325CC0000A0817 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62E6D3BC24325CC0000A0817 /* Localizable.strings */; };
 		62E6D3C324325F54000A0817 /* CarthageOutput.xcfilelist in Resources */ = {isa = PBXBuildFile; fileRef = 62E6D3C124325F53000A0817 /* CarthageOutput.xcfilelist */; };
@@ -109,21 +109,6 @@
 			remoteInfo = Channels;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		6293F2102447EB2700525F32 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				6293F20F2447EB2700525F32 /* SDWebImageMapKit.framework in Embed Frameworks */,
-				6293F20D2447EB2700525F32 /* SDWebImage.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		622A39CB24446A290036B9CE /* ChannelSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelSeries.swift; sourceTree = "<group>"; };
@@ -229,9 +214,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62CF0AC1244B9C9F005C3919 /* SDWebImage.framework in Frameworks */,
 				6293F20E2447EB2700525F32 /* SDWebImageMapKit.framework in Frameworks */,
 				62E6D3CD243266F0000A0817 /* Moya.framework in Frameworks */,
 				6293F20C2447EB2700525F32 /* SDWebImage.framework in Frameworks */,
+				62CF0AC2244B9C9F005C3919 /* SDWebImageMapKit.framework in Frameworks */,
 				62E6D3CB243266F0000A0817 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,7 +539,6 @@
 				62E6D3B624325AE9000A0817 /* Swiftlint Run Script */,
 				62E6D3B724325B89000A0817 /* Swiftgen Run Script */,
 				62E6D3C524325FB8000A0817 /* Carthage Script */,
-				6293F2102447EB2700525F32 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

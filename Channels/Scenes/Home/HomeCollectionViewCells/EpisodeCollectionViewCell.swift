@@ -25,7 +25,7 @@ class EpisodeCollectionViewCell: UICollectionViewCell {
    }
     func setupView() {
         eposideImageView.image = Asset.Images.test.image
-        eposideImageView.layer.modifyCornerRadius(radius: 15)
+        eposideImageView.layer.modifyCornerRadius(radius: 20)
         eposideTitleLabel.setupView(with: Asset.Colors.whiteColor.color,
                                     font: FontFamily.Gilroy.extraBold.font(size: 17))
         eposideDescriptionLabel.setupView(with: Asset.Colors.subTitleColor.color,
