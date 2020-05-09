@@ -20,6 +20,7 @@ protocol HomeModelProtocol: BaseModelProtocol {
     func getCategories(completion: @escaping(Result<[Categories]?, NetworkError>) -> Void)
 }
 protocol HomePresenterProtocol: BasePresenterProtocol {
+    //completion: @escaping (() -> Void)
     func fetchEpisodesData()
     func fetchChannelsData()
     func fetchCategoriesData()

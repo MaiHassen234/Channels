@@ -1,6 +1,8 @@
 
 github "Moya/Moya" ~> 14.0.0-alpha.1
 github "SDWebImage/SDWebImage"
+github "scalessec/Toast-Swift" ~> 5.0.0
+
 
 
 

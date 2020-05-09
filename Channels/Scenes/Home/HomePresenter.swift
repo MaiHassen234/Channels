@@ -20,7 +20,6 @@ class HomePresenter: BasePresenter, HomePresenterProtocol {
         self.fetchEpisodesData()
         self.fetchChannelsData()
         self.fetchCategoriesData()
-        
     }
     
     func fetchEpisodesData() {

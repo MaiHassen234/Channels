@@ -14,7 +14,8 @@ protocol BaseViewProtocol: ViewLoadable, ViewMessageable {
 }
 
 protocol ViewLoadable {
-
+  func showLoader(allowNavigation: Bool)
+  func hideLoader()
 }
 
 protocol ViewMessageable {

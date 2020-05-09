@@ -28,58 +28,58 @@ class ChannelsCollectionViewAdaptor: NSObject {
     }
     func createCellsDataSource() {
         dataSource = UICollectionViewDiffableDataSource <Section,
-             SectionObject <LatestMedia,
-             Media,
-             Categories> >(collectionView: collectionView) { _, indexPath, item in
-                 switch self.sections[indexPath.section].type {
-                 case .episode:
-                     
-                     return self.configureEpisodeSection(index: indexPath, media: item.media)
-                 case .series:
-                     
-                     return self.configureSeriesSection(index: indexPath, channels: item.channels)
-                 case .course:
-                     
-                     return self.configureCourseSection(index: indexPath, channels: item.channels)
-                 case .categories:
-                     
-                     return self.configureCategorieSection(index: indexPath, categories: item.categories)
-                 }
+            SectionObject <LatestMedia,
+            Media,
+            Categories> >(collectionView: collectionView) { _, indexPath, item in
+                switch self.sections[indexPath.section].type {
+                case .episode:
+                    
+                    return self.configureEpisodeSection(index: indexPath, media: item.media)
+                case .series:
+                    
+                    return self.configureSeriesSection(index: indexPath, channels: item.channels)
+                case .course:
+                    
+                    return self.configureCourseSection(index: indexPath, channels: item.channels)
+                case .categories:
+                    
+                    return self.configureCategorieSection(index: indexPath, categories: item.categories)
+                }
         }
     }
     
     func createHeadersDataSource() {
-    dataSource?.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
-        switch self?.sections[indexPath.section].type {
-        case .episode:
-            guard let sectionHeader = self?.configureTitleHeader(kind: kind, indexPath: indexPath, type: .episode)
-                else { return nil }
-            return sectionHeader
-        case .series:
-            guard let sectionHeader = self?.configureCollectionHeader(kind: kind,
-                                                                      indexPath: indexPath,
-                                                                      type: .series)
-                else { return nil }
-            return sectionHeader
-            
-        case .course:
-            guard let sectionHeader = self?.configureCollectionHeader(kind: kind,
-                                                                      indexPath: indexPath,
-                                                                      type: .course)
-                else { return nil }
-            return sectionHeader
-        case .categories:
-            guard let sectionHeader = self?.configureTitleHeader(kind: kind,
-                                                                 indexPath: indexPath,
-                                                                 type: .categories)
-                else { return nil }
-            return sectionHeader
-        case .none:
-            return nil
+        dataSource?.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
+            switch self?.sections[indexPath.section].type {
+            case .episode:
+                guard let sectionHeader = self?.configureTitleHeader(kind: kind, indexPath: indexPath, type: .episode)
+                    else { return nil }
+                return sectionHeader
+            case .series:
+                guard let sectionHeader = self?.configureCollectionHeader(kind: kind,
+                                                                          indexPath: indexPath,
+                                                                          type: .series)
+                    else { return nil }
+                return sectionHeader
+                
+            case .course:
+                guard let sectionHeader = self?.configureCollectionHeader(kind: kind,
+                                                                          indexPath: indexPath,
+                                                                          type: .course)
+                    else { return nil }
+                return sectionHeader
+            case .categories:
+                guard let sectionHeader = self?.configureTitleHeader(kind: kind,
+                                                                     indexPath: indexPath,
+                                                                     type: .categories)
+                    else { return nil }
+                return sectionHeader
+            case .none:
+                return nil
+            }
         }
     }
-    }
-
+    
     func reloadData() {
         var snapshot = NSDiffableDataSourceSnapshot<Section, SectionObject<LatestMedia, Media, Categories>>()
         
@@ -105,9 +105,9 @@ class ChannelsCollectionViewAdaptor: NSObject {
     }
 }
 
-    // MARK: - Send Data To Configure Cells
-    extension ChannelsCollectionViewAdaptor {
-            
+// MARK: - Send Data To Configure Cells
+extension ChannelsCollectionViewAdaptor {
+    
     private func configureEpisodeSection(index: IndexPath, media: Media?) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EpisodeCollectionViewCell.identifier,
                                                             for: index) as? EpisodeCollectionViewCell else {
@@ -157,7 +157,7 @@ class ChannelsCollectionViewAdaptor: NSObject {
         
         return sectionHeader
     }
-
+    
     private func configureCollectionHeader(kind: String,
                                            indexPath: IndexPath,
                                            type: SectionType) -> UICollectionReusableView? {
@@ -187,7 +187,7 @@ extension ChannelsCollectionViewAdaptor {
         }
         let section = Section(type: .episode)
         self.sections.append(section)
-      
+        self.reloadData()
     }
     
     func addChannels(channels: [Channels]?) {
@@ -195,7 +195,7 @@ extension ChannelsCollectionViewAdaptor {
         
         self.channelsArray = [Channels]()
         self.channelsArray?.append(contentsOf: channels)
-      
+        
         for channel in channels {
             if channel.series?.isEmpty ?? true {
                 let section = Section(type: .series)
@@ -212,7 +212,10 @@ extension ChannelsCollectionViewAdaptor {
                 self.channelsObjects.append(obj)
             }
             self.sectionsObjects.append(channelsObjects)
+            
             channelsObjects = []
+            self.reloadData()
+            
         }
     }
     
@@ -222,7 +225,7 @@ extension ChannelsCollectionViewAdaptor {
             let obj = SectionObject<LatestMedia, Media, Categories>(channels: nil, media: nil, categories: categorie)
             self.categoriesObjects.append(obj)
         }
-      
+        
         let section = Section(type: .categories)
         self.sections.append(section)
         self.reloadData()
