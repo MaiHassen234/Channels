@@ -11,6 +11,14 @@ import XCTest
 
 @testable import Channels
 class HomeScreenViewMocking: HomeViewProtocol {
+    func showLoader(allowNavigation: Bool) {
+        
+    }
+    
+    func hideLoader() {
+        
+    }
+    
     func addChannels(channels: [Channels]?) {
         
     }

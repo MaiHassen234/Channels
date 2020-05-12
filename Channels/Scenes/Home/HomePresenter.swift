@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HomePresenter: BasePresenter, HomePresenterProtocol {
+ class HomePresenter: BasePresenter, HomePresenterProtocol {
     var view: HomeViewProtocol
     var model: HomeModelProtocol
     weak var delegate: CoordinatorDelegate?

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Categories: Codable, Hashable {
+ struct Categories: Codable, Hashable {
     let name: String?
     enum CodingKeys: String, CodingKey {
         case name

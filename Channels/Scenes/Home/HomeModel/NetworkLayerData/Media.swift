@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Media: Codable, Hashable {
+public struct Media: Codable, Hashable {
   let type: String?
   let title: String?
   let coverAsset: CoverAsset?
@@ -20,7 +20,7 @@ struct Media: Codable, Hashable {
     case coverAsset
     case channel
   }
-  init(from decoder: Decoder) throws {
+  public init(from decoder: Decoder) throws {
     let values = try decoder.container(keyedBy: CodingKeys.self)
     type = try values.decodeIfPresent(String.self, forKey: .type)
     title = try values.decodeIfPresent(String.self, forKey: .title)
