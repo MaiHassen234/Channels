@@ -10,7 +10,7 @@ import Foundation
 import XCTest
 
 @testable import Channels
-class HomeViewMocking: HomeViewProtocol {
+class HomeScreenViewMocking: HomeViewProtocol {
     func addChannels(channels: [Channels]?) {
         
     }

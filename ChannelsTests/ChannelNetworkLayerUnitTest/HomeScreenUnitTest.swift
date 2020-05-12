@@ -20,7 +20,7 @@ class HomeScreenUnitTest: XCTestCase {
         }
 
        func testFetchingEpisodes() {
-            let homeModel = HomeModelMocking()
+            let homeModel = HomeScreenModelMocking()
         homeModel.getEpisodes(completion: {_ in
             
         })
@@ -28,10 +28,20 @@ class HomeScreenUnitTest: XCTestCase {
         XCTAssertTrue(firstEpisode?.title == "Conscious Parenting", "failed to parse first episode name")
           
         }
+    
+       func testFetchingCategories() {
+            let homeModel = HomeScreenModelMocking()
+        homeModel.getCategories(completion: {_ in
+
+        })
+        let firstCategory = homeModel.categories?[0]
+        XCTAssertTrue(firstCategory?.name == "Career")
+
+        }
         
      func testFetchingScreenData() {
-        let homeModel = HomeModelMocking()
-        let homeView = HomeViewMocking()
+        let homeModel = HomeScreenModelMocking()
+        let homeView = HomeScreenViewMocking()
         let presenter = HomePresenter(view: homeView, model: homeModel)
         presenter.viewDidLoad()
                 XCTAssertTrue(homeModel.categories?.count == 12,
