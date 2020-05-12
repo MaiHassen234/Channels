@@ -20,7 +20,7 @@ struct Channels: Codable, Hashable {
 	let id: String?
 	let iconAsset: IconAsset?
 	let coverAsset: CoverAsset?
-
+  
 	enum CodingKeys: String, CodingKey {
 
 		case title

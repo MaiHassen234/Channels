@@ -12,8 +12,6 @@ import ToastSwiftFramework
 
 class BaseViewController<Presenter: BasePresenterProtocol>: UIViewController, BaseViewProtocol {
 
-    
-    
     // MARK: - Presenter Setup
     var presenter: Presenter!
     private var container: UIView = UIView()
@@ -33,8 +31,6 @@ class BaseViewController<Presenter: BasePresenterProtocol>: UIViewController, Ba
     }
     
     // MARK: - ViewMessageable Protocol
-    
-    
     
     func showLoader(allowNavigation: Bool) {
         container.frame = CGRect(x: 0,
@@ -58,17 +54,16 @@ class BaseViewController<Presenter: BasePresenterProtocol>: UIViewController, Ba
         activityIndicator.center = CGPoint(x: loadingView.frame.size.width / 2,
                                            y: loadingView.frame.size.height / 2)
         activityIndicator.startAnimating()
-        
         container.addSubview(loadingView)
         self.view.addSubview(container)
         loadingView.addSubview(activityIndicator)
         
     }
     
-
     func hideLoader() {
         activityIndicator.stopAnimating()
         container.removeFromSuperview()
+        
     }
     
     func showErrorMassege(errorMessage: String) {
