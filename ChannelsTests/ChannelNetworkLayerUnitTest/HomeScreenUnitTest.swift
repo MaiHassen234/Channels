@@ -10,24 +10,40 @@ import XCTest
 
 class HomeScreenUnitTest: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+        override func setUpWithError() throws {
+            // Put setup code here. This method is called before the invocation of each test method in the class.
+            
+        }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        override func tearDownWithError() throws {
+            // Put teardown code here. This method is called after the invocation of each test method in the class.
+        }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+       func testFetchingEpisodes() {
+            let homeModel = HomeModelMocking()
+        homeModel.getEpisodes(completion: {_ in
+            
+        })
+        let firstEpisode = homeModel.media?[0]
+        XCTAssertTrue(firstEpisode?.title == "Conscious Parenting", "failed to parse first episode name")
+          
+        }
+        
+     func testFetchingScreenData() {
+        let homeModel = HomeModelMocking()
+        let homeView = HomeViewMocking()
+        let presenter = HomePresenter(view: homeView, model: homeModel)
+        presenter.viewDidLoad()
+                XCTAssertTrue(homeModel.categories?.count == 12,
+                              "Failed to return the expected count of categories")
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        let firstChannel = homeModel.channels?[0]
+               
+        XCTAssertTrue(firstChannel?.latestMedia?[0].title == "How Journaling Helped Create a $500M Company",
+                      "failed to parse first channel name")
+        }
+        
+        func testFetchDatafromNetwork() {
+            
         }
     }
-
-}
