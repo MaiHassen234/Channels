@@ -6,4 +6,5 @@
   Copyright © 2020 Mai hassen. All rights reserved.
 */
 "login.welcome_label" = "أهلاً بك";
-
+"home.newEposide_label" = "New Eposides";
+"home.browseByCategories_label" = "Browse By Categories";

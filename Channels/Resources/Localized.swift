@@ -12,6 +12,13 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
 
+  internal enum Home {
+    /// Browse By Categories
+    internal static let browseByCategoriesLabel = L10n.tr("Localizable", "home.browseByCategories_label")
+    /// New Eposides
+    internal static let newEposideLabel = L10n.tr("Localizable", "home.newEposide_label")
+  }
+
   internal enum Login {
     /// أهلاً بك
     internal static let welcomeLabel = L10n.tr("Localizable", "login.welcome_label")
