@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import PromiseKit
+
 
 class HomeModel: BaseModel, HomeModelProtocol {
   
